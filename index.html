@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b46">
+  <title>Blue Ribbon French Bulldogs</title>
+  <meta name="description" content="Meet the puppies at Blue Ribbon French Bulldogs. Contact us to learn about availability.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #182638;
+      background: #faf9f6;
+      line-height: 1.6;
+    }
+    header {
+      background: #102b46;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand { font-size: 19px; font-weight: bold; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 14px;
+    }
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: linear-gradient(135deg, #102b46, #345a78);
+      color: white;
+    }
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 7vw, 54px);
+      line-height: 1.15;
+      margin: 10px auto 18px;
+      max-width: 700px;
+    }
+    .hero p { max-width: 520px; margin: 0 auto 24px; }
+    .button {
+      display: inline-block;
+      background: #d8b36a;
+      color: #102b46;
+      padding: 12px 22px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+    section { padding: 42px 6%; }
+    .section-title {
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 32px;
+      margin: 0 0 8px;
+    }
+    .intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+    .puppies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      max-width: 1050px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e8e3d9;
+      box-shadow: 0 4px 15px #14283b0b;
+    }
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+      background: #e9e5de;
+    }
+    .card-content { padding: 18px; }
+    .card h3 { margin: 0 0 8px; }
+    .tag {
+      color: #8c682d;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .contact {
+      text-align: center;
+      background: #eeeae1;
+    }
+    footer {
+      background: #102b46;
+      color: white;
+      text-align: center;
+      padding: 24px 15px;
+      font-size: 13px;
+    }
+    footer a { color: #e5c783; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Blue Ribbon French Bulldogs</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#puppies">Our Puppies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="tag">A special friend awaits</p>
+      <h1>Find Your New Best Friend</h1>
+      <p>Welcome to Blue Ribbon French Bulldogs. Meet our puppies and contact us to learn more about their availability.</p>
+      <a class="button" href="#puppies">Meet Our Puppies</a>
+      <a class="button" href="#contact">Contact Us</a>
+    </section>
+
+    <section id="puppies">
+      <h2 class="section-title">Meet Our Puppies</h2>
+      <p class="intro">Every puppy has a personality of their own. Contact us for current availability, details, and information about our puppies.</p>
+
+      <div class="puppies">
+        <article class="card">
+          <img src="https://placehold.co/600x450/f1ede5/102b46?text=Add+Puppy+Photo" alt="Puppy photo to be added">
+          <div class="card-content">
+            <span class="tag">Meet our puppies</span>
+            <h3>Meet Your New Companion</h3>
+            <p>Ask us about this puppy's age, temperament, health records, and current availability.</p>
+            <a class="button" href="#contact">Enquire Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://placehold.co/600x450/f1ede5/102b46?text=Add+Puppy+Photo" alt="Puppy photo to be added">
+          <div class="card-content">
+            <span class="tag">Meet our puppies</span>
+            <h3>Find Your Perfect Match</h3>
+            <p>Contact us for information about this puppy and the next steps for a responsible adoption.</p>
+            <a class="button" href="#contact">Enquire Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://placehold.co/600x450/f1ede5/102b46?text=Add+Puppy+Photo" alt="Puppy photo to be added">
+          <div class="card-content">
+            <span class="tag">Meet our puppies</span>
+            <h3>Your New Best Friend</h3>
+            <p>Ask us about this puppy's personality, care needs, and availability.</p>
+            <a class="button" href="#contact">Enquire Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">Let's Talk Puppies</h2>
+      <p>Have a question about our French Bulldogs? We'd love to hear from you.</p>
+      <p><strong>Email:</strong> blueribbonfrenchbulldogs@gmail.com</p>
+      <p><strong>Phone:</strong> +1 937-518-5268</p>
+      <a class="button" href="mailto:blueribbonfrenchbulldogs@gmail.com?subject=French%20Bulldog%20Puppy%20Enquiry">Email Us</a>
+      <a class="button" href="tel:+19375185268">Call Us</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Blue Ribbon French Bulldogs</p>
+    <p>© 2026 Blue Ribbon French Bulldogs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
