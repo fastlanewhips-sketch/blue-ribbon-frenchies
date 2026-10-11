@@ -1,45 +1,54 @@
-<!DOCTYPE html><html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#102b46">
-  <title>Blue Ribbon French Bulldogs</title>
-  <meta name="description" content="Meet the puppies and explore customer photos at Blue Ribbon French Bulldogs. Contact us for puppy details and availability.">  <style>
-    * { box-sizing: border-box; }
+  <meta name="description" content="Welcome to Blue Ribbon French Bulldogs. Explore our puppy gallery and contact us for current availability.">
+  <title>Blue Ribbon French Bulldogs | Find Your Best Friend</title>
 
-    html { scroll-behavior: smooth; }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #182638;
       background: #faf9f6;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background: #102b46;
       color: white;
-      padding: 16px 6%;
+      padding: 14px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 15px;
     }
 
     .brand img {
-      display: block;
-      height: 72px;
-      width: auto;
-      max-width: 100%;
+      width: 190px;
+      height: 85px;
       object-fit: contain;
+      display: block;
+      border-radius: 6px;
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 18px;
+      align-items: center;
     }
 
     nav a {
@@ -49,64 +58,93 @@
       font-weight: bold;
     }
 
-    nav a:hover { color: #e5c783; }
+    nav a:hover {
+      color: #e5c783;
+    }
 
     .hero {
       text-align: center;
-      padding: 70px 20px;
+      padding: 65px 20px 75px;
       background: linear-gradient(135deg, #102b46, #345a78);
       color: white;
     }
 
+    .hero-display {
+      width: min(260px, 80%);
+      height: 220px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 22px;
+      border-radius: 12px;
+    }
+
+    .eyebrow {
+      color: #e5c783;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
     .hero h1 {
       font-family: Georgia, serif;
-      font-size: clamp(34px, 7vw, 56px);
+      font-size: clamp(34px, 7vw, 58px);
       line-height: 1.15;
       margin: 12px auto 18px;
-      max-width: 750px;
+      max-width: 780px;
     }
 
     .hero p {
-      max-width: 600px;
-      margin: 0 auto 22px;
+      max-width: 650px;
+      margin: 0 auto 24px;
     }
-
-    .hero .tag { color: #e5c783; }
 
     .button {
       display: inline-block;
       background: #d8b36a;
       color: #102b46;
-      padding: 12px 20px;
+      padding: 12px 21px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
       margin: 5px;
+      border: 1px solid #d8b36a;
     }
 
-    .button:hover { background: #edcf91; }
+    .button:hover {
+      background: #edcf91;
+    }
 
-    section { padding: 48px 6%; }
+    .button-outline {
+      background: transparent;
+      color: white;
+      border-color: #e5c783;
+    }
+
+    section {
+      padding: 55px 6%;
+      scroll-margin-top: 20px;
+    }
 
     .section-title {
       text-align: center;
       font-family: Georgia, serif;
-      font-size: clamp(27px, 5vw, 36px);
+      font-size: clamp(28px, 5vw, 38px);
       margin: 0 0 10px;
       color: #102b46;
     }
 
     .intro {
       text-align: center;
-      max-width: 680px;
-      margin: 0 auto 30px;
+      max-width: 720px;
+      margin: 0 auto 32px;
     }
 
     .puppies {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
-      gap: 22px;
-      max-width: 1150px;
+      gap: 24px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -115,24 +153,26 @@
       border-radius: 10px;
       overflow: hidden;
       border: 1px solid #e8e3d9;
-      box-shadow: 0 4px 15px #14283b0b;
+      box-shadow: 0 5px 18px rgba(16, 43, 70, 0.08);
     }
 
     .card img {
       width: 100%;
-      height: 250px;
+      height: 255px;
       object-fit: cover;
       display: block;
       background: #e9e5de;
     }
 
-    .card-content { padding: 18px; }
+    .card-content {
+      padding: 19px;
+    }
 
     .card h3 {
-      margin: 4px 0 8px;
+      margin: 5px 0 8px;
       color: #102b46;
       font-family: Georgia, serif;
-      font-size: 21px;
+      font-size: 22px;
     }
 
     .tag {
@@ -145,19 +185,29 @@
 
     .price {
       color: #102b46;
-      font-size: 17px;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    .reviews { background: #f1eee7; }
+    .card .button {
+      margin-left: 0;
+    }
 
-    .review-caption { font-style: italic; }
+    .reviews {
+      background: #f1eee7;
+    }
+
+    .review-caption {
+      color: #4d5864;
+      font-style: italic;
+    }
 
     .review-note {
       text-align: center;
       color: #5c6570;
       font-size: 13px;
-      max-width: 700px;
-      margin: 25px auto 0;
+      max-width: 760px;
+      margin: 28px auto 0;
     }
 
     .contact {
@@ -167,16 +217,25 @@
 
     .contact-details {
       margin: 22px auto;
-      max-width: 500px;
+      max-width: 520px;
       overflow-wrap: anywhere;
+    }
+
+    .contact-details a {
+      color: #102b46;
+      font-weight: bold;
     }
 
     footer {
       background: #102b46;
       color: white;
       text-align: center;
-      padding: 24px 15px;
+      padding: 25px 15px;
       font-size: 13px;
+    }
+
+    footer p {
+      margin: 5px;
     }
 
     @media (max-width: 600px) {
@@ -185,147 +244,345 @@
         text-align: center;
       }
 
-      .brand img { height: 65px; }
+      .brand img {
+        width: 175px;
+        height: 75px;
+        margin: auto;
+      }
 
       nav {
         justify-content: center;
         gap: 12px;
       }
 
-      .hero { padding: 55px 18px; }
-      section { padding: 38px 5%; }
-      .card img { height: 235px; }
+      .hero {
+        padding: 45px 18px 55px;
+      }
+
+      .hero-display {
+        height: 180px;
+      }
+
+      section {
+        padding: 40px 5%;
+      }
+
+      .card img {
+        height: 240px;
+      }
     }
-  </style></head><body>
+  </style>
+</head>
+
+<body>
+
   <header>
-    <div class="brand">
-      <img src="./blue-ribbon-display.png" alt="Blue Ribbon French Bulldogs">
-    </div>
-    <nav>
+    <a class="brand" href="#home" aria-label="Blue Ribbon French Bulldogs home">
+      <img src="./FB_IMG_1791731195582.jpg"
+           alt="Blue Ribbon French Bulldogs logo">
+    </a>
+
+    <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#puppies">Our Puppies</a>
       <a href="#reviews">Customer Photos</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>  <main>
+  </header>
+
+  <main>
     <section class="hero" id="home">
-      <p class="tag">A special friend awaits</p>
+      <img class="hero-display"
+           src="./FB_IMG_1791731195582.jpg"
+           alt="Blue Ribbon French Bulldogs display">
+
+      <p class="eyebrow">A special friend awaits</p>
       <h1>Find Your New Best Friend</h1>
-      <p>Welcome to Blue Ribbon French Bulldogs. Explore our puppy gallery and contact us for current availability and details.</p>
+
+      <p>
+        Welcome to Blue Ribbon French Bulldogs! Explore our puppy gallery
+        and contact us to ask about current availability, pricing, and
+        information about a puppy you are interested in.
+      </p>
+
       <a class="button" href="#puppies">Meet Our Puppies</a>
-      <a class="button" href="#reviews">Customer Photos</a>
-    </section><section id="puppies">
-  <h2 class="section-title">Meet Our Puppies</h2>
-  <p class="intro">Every puppy has a personality of their own. Contact us for current availability and details.</p>
+      <a class="button button-outline" href="#contact">Contact Us</a>
+    </section>
 
-  <div class="puppies">
-    <article class="card">
-      <img src="./FB_IMG_1791530072971.jpg" alt="Winston the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Male • 10 weeks old</span>
-        <h3>Meet Winston 🐶💙</h3>
-        <p>Winston is a handsome French Bulldog full of character. He loves attention, exploring, and spending time with people.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Winston</a>
+    <section id="puppies">
+      <h2 class="section-title">Meet Our Puppies</h2>
+      <p class="intro">
+        Every puppy has a personality of their own. Browse our gallery
+        and contact us for current availability and details.
+      </p>
+
+      <div class="puppies">
+
+        <article class="card">
+          <img src="./FB_IMG_1791530072971.jpg"
+               alt="Winston the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Male · 10 weeks old</span>
+            <h3>Meet Winston 🐶💙</h3>
+            <p>Winston is a handsome French Bulldog full of character. He loves attention, exploring, and spending time with people.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Winston</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./FB_IMG_1791530057858.jpg"
+               alt="Luna the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Female · 10 weeks old</span>
+            <h3>Meet Luna 🌙🎀</h3>
+            <p>Luna is a gorgeous Frenchie with a sweet personality. She is playful, affectionate, and ready to meet her forever family.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Luna</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./FB_IMG_1791530038894.jpg"
+               alt="Milo the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Male · 10 weeks old</span>
+            <h3>Meet Milo 🐾💙</h3>
+            <p>Milo is a charming French Bulldog who loves attention and playtime. Contact us to learn more about him.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Milo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./FB_IMG_1791530028103.jpg"
+               alt="Daisy the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Female · 10 weeks old</span>
+            <h3>Meet Daisy 🌸🐶</h3>
+            <p>Daisy is a beautiful French Bulldog with a sweet, affectionate personality and a playful, curious nature.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Daisy</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./babycoop_frenchbulldog_20261008_170328_007.jpg"
+               alt="Duke the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Male · 10 weeks old</span>
+            <h3>Meet Duke 👑🐾</h3>
+            <p>Duke is a handsome Frenchie with a big personality. He enjoys attention, playtime, and being around people.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Duke</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./cherryvalleybluefrenchies_20261008_173358_705.jpg"
+               alt="Coco the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Female · 10 weeks old</span>
+            <h3>Meet Coco 🤎🐾</h3>
+            <p>Coco is a sweet French Bulldog with a playful, loving, and curious personality. Contact us to learn more about her.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Coco</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./toronto_frenchbulldog_breeder_20261008_171259_799.jpg"
+               alt="Rocky the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Male · 10 weeks old</span>
+            <h3>Meet Rocky 🐶💙</h3>
+            <p>Rocky is a playful, affectionate Frenchie who loves attention. Contact us for details about his availability.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Rocky</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./precious_gems_french_bulldogs_20261008_173125_677.jpg"
+               alt="Bella the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Female · 10 weeks old</span>
+            <h3>Meet Bella 🎀🐾</h3>
+            <p>Bella is a beautiful French Bulldog with a sweet personality. Contact us to learn more about her.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Bella</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./precious_gems_french_bulldogs_20261008_173125_677.jpg"
+               alt="Bruno the French Bulldog puppy" loading="lazy">
+          <div class="card-content">
+            <span class="tag">Male · 10 weeks old</span>
+            <h3>Meet Bruno 🐾💙</h3>
+            <p>Bruno is a playful, curious, and affectionate French Bulldog. Contact us to ask about his availability.</p>
+            <p class="price">$1,200</p>
+            <a class="button" href="#contact">Ask About Bruno</a>
+          </div>
+        </article>
+
       </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <img src="./FB_IMG_1791530057858.jpg" alt="Luna the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Female • 10 weeks old</span>
-        <h3>Meet Luna 🌙🎀</h3>
-        <p>Luna is a gorgeous Frenchie with a sweet personality. She is playful, affectionate, and ready to meet her family.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Luna</a>
+    <section class="reviews" id="reviews">
+      <h2 class="section-title">Happy Families &amp; Customer Photos</h2>
+      <p class="intro">
+        A gallery celebrating the special bond between families and their
+        French Bulldog companions.
+      </p>
+
+      <div class="puppies">
+
+        <article class="card">
+          <img src="./0461f35ab314c5c6634f38ef47db2b1f.jpg"
+               alt="French Bulldog family photo" loading="lazy">
+          <div class="card-content">
+            <h3>Happy Family 🐾💙</h3>
+            <p class="review-caption">Celebrating the joy, companionship, and special memories that French Bulldogs bring to a family.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./2f4f8e39aa93fe879491ab89a35f6de7.jpg"
+               alt="French Bulldog companion photo" loading="lazy">
+          <div class="card-content">
+            <h3>A Forever Friendship 🏡</h3>
+            <p class="review-caption">A new chapter filled with love, laughter, and unforgettable moments with a beloved companion.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./300aca4ec36bedf24664cd458ae4476f.jpg"
+               alt="French Bulldog photo" loading="lazy">
+          <div class="card-content">
+            <h3>Love at First Sight 💕</h3>
+            <p class="review-caption">There is something special about the bond between a Frenchie and the people who love them.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./6c4c09d46ccc24ac43ea194ff1e5e1e9.jpg"
+               alt="French Bulldog companion photo" loading="lazy">
+          <div class="card-content">
+            <h3>A New Family Member 🎀</h3>
+            <p class="review-caption">Small paws, big personalities, and the promise of wonderful memories together.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./75a5d5f6279b04e20e1bd166f416635c.jpg"
+               alt="French Bulldog family photo" loading="lazy">
+          <div class="card-content">
+            <h3>Making Memories 📸</h3>
+            <p class="review-caption">Every day brings another opportunity for affection, playtime, and treasured moments.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./7f35a5173d4cca4d7e72605b671091f7.jpg"
+               alt="French Bulldog photo" loading="lazy">
+          <div class="card-content">
+            <h3>Forever Loved 🐾</h3>
+            <p class="review-caption">A loving companion can make an ordinary day feel extra special.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./ac897be5b61b97df6a373b0768a4d8d1.jpg"
+               alt="French Bulldog companion photo" loading="lazy">
+          <div class="card-content">
+            <h3>Our Frenchie Family 💙</h3>
+            <p class="review-caption">Celebrating the wonderful personalities and companionship that make French Bulldogs so memorable.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./b497fd30970787e640fc8fc16d317cba.jpg"
+               alt="French Bulldog photo" loading="lazy">
+          <div class="card-content">
+            <h3>Little Paws, Big Love 🐶</h3>
+            <p class="review-caption">A little companion can bring so much happiness, affection, and fun into a home.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./c47aebc210e61409dc06933185ecd342.jpg"
+               alt="French Bulldog family photo" loading="lazy">
+          <div class="card-content">
+            <h3>A Heartwarming Moment 🏡</h3>
+            <p class="review-caption">Home feels even more special when shared with a beloved four-legged friend.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./d1d40fe48d9ae40ee888ca2127b887b6.jpg"
+               alt="French Bulldog companion photo" loading="lazy">
+          <div class="card-content">
+            <h3>A Lifetime of Companionship ✨</h3>
+            <p class="review-caption">Celebrating the friendship, loyalty, and love that a cherished companion can bring.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./dbc22ac9e0802ce6736cf50946c9ce0b.jpg"
+               alt="French Bulldog photo" loading="lazy">
+          <div class="card-content">
+            <h3>Happy Tails &amp; Happy Hearts 💕</h3>
+            <p class="review-caption">French Bulldogs have a special way of making moments together unforgettable.</p>
+          </div>
+        </article>
+
       </div>
-    </article>
 
-    <article class="card">
-      <img src="./FB_IMG_1791530038894.jpg" alt="Milo the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Male • 10 weeks old</span>
-        <h3>Meet Milo 🐾💙</h3>
-        <p>Milo is a charming French Bulldog who loves attention and playtime. Contact us to learn more about him.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Milo</a>
+      <p class="review-note">
+        Photo captions are descriptive promotional text, not verified
+        customer testimonials. Use genuine customer feedback when publishing
+        actual reviews.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">Let's Talk Puppies</h2>
+      <p>
+        Interested in one of our French Bulldogs? Contact us to ask about
+        current availability and arrange a conversation.
+      </p>
+
+      <div class="contact-details">
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:blueribbonfrenchbulldogs@gmail.com">
+            blueribbonfrenchbulldogs@gmail.com
+          </a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+19375185268">+1 937-518-5268</a>
+        </p>
       </div>
-    </article>
 
-    <article class="card">
-      <img src="./FB_IMG_1791530028103.jpg" alt="Daisy the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Female • 10 weeks old</span>
-        <h3>Meet Daisy 🌸🐶</h3>
-        <p>Daisy is a beautiful French Bulldog with a sweet and affectionate personality. Contact us for details about her.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Daisy</a>
-      </div>
-    </article>
+      <a class="button"
+         href="mailto:blueribbonfrenchbulldogs@gmail.com?subject=French%20Bulldog%20Puppy%20Enquiry">
+        Email Us
+      </a>
 
-    <article class="card">
-      <img src="./babycoop_frenchbulldog_20261008_170328_007.jpg" alt="Duke the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Male • 10 weeks old</span>
-        <h3>Meet Duke 👑🐾</h3>
-        <p>Duke is a handsome Frenchie with a big personality. Contact us to learn more about him.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Duke</a>
-      </div>
-    </article>
+      <a class="button" href="tel:+19375185268">Call Us</a>
+    </section>
+  </main>
 
-    <article class="card">
-      <img src="./cherryvalleybluefrenchies_20261008_173358_705.jpg" alt="Coco the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Female • 10 weeks old</span>
-        <h3>Meet Coco 🤎🐾</h3>
-        <p>Coco is a sweet French Bulldog. Contact us for more information about her personality and availability.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Coco</a>
-      </div>
-    </article>
+  <footer>
+    <p><strong>Blue Ribbon French Bulldogs</strong></p>
+    <p>© 2026 Blue Ribbon French Bulldogs. All rights reserved.</p>
+  </footer>
 
-    <article class="card">
-      <img src="./toronto_frenchbulldog_breeder_20261008_171259_799.jpg" alt="Rocky the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Male • 10 weeks old</span>
-        <h3>Meet Rocky 🐶💙</h3>
-        <p>Rocky is a playful Frenchie who loves attention. Contact us for more information about him.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Rocky</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="./precious_gems_french_bulldogs_20261008_173125_677.jpg" alt="Bella the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Female • 10 weeks old</span>
-        <h3>Meet Bella 🎀🐾</h3>
-        <p>Bella is a beautiful French Bulldog with a sweet personality. Contact us to learn more about her.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Bella</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="./precious_gems_french_bulldogs_20261008_173125_677.jpg" alt="Bruno the French Bulldog puppy" loading="lazy">
-      <div class="card-content">
-        <span class="tag">Male • 10 weeks old</span>
-        <h3>Meet Bruno 🐾💙</h3>
-        <p>Bruno is a handsome French Bulldog with an adorable personality. Contact us for details about his availability.</p>
-        <p class="price"><strong>Price: $1,200</strong></p>
-        <a class="button" href="#contact">Ask About Bruno</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="reviews" id="reviews">
-  <h2 class="section-title">Happy Families &amp; Customer Photos</h2>
-  <p class="intro">A collection of customer photos celebrating the special bond between families and their French Bulldog companions.</p>
-
-  <div class="puppies">
-    <article class="card">
+</body>
+</html>
+="card">
       <img src="./0461f35ab314c5c6634f38ef47db2b1f.jpg" alt="Customer and French Bulldog photo" loading="lazy">
       <div class="card-content">
         <h3>Happy Family 🐾💙</h3>
